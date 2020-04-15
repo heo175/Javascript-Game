@@ -1,0 +1,112 @@
+문자, 숫자(NaN), 불린(참거짓), undefined(빈값), null
+연산자
+
+NaN == NaN 하면 true가 나올 것 같지만 false가 나온다.
+NaN === NaN 하면 false가 나온다. 유일한 예외. 
+
+1 == '1' 하면 true가 나온다.
+1 === '1' 하면 false가 나온다. ===이 제대로된 비교.
+
+* 비교할 때는 무조건 ===, !==으로 하면 편하다.
+
+연산자는 우선순위가 있다. =이 제일 마지막에 실행된다.
+
+변수 : var
+var 이름 = 값;
+
+변수명에는 특수문자 사용 불가능하다. ($, _ 은 가능)
+숫자를 첫 글자로 사용 불가능하다.
+
+* undefined 대신 null 쓰는게 좋다.
+
+undefined : 변수 선언하고 아무것도 안 넣었을 때, 컴퓨터가 넣은 빈 값
+null : 내가 넣은 빈 값
+
+
+
+<끝말잇기>
+// while 버전
+var word = undefined
+var answer = undefined
+var i = 0
+
+word = prompt('첫 제시어를 입력해주세요.')
+
+while(i<4){
+
+answer = prompt(word)
+
+if(word[word.length-1]==answer[0]){
+    alert('ok')
+    word = answer
+} else {
+    alert('x')
+}
+
+i++
+}
+
+// for 버전
+var word = undefined
+var answer = undefined
+
+word = prompt('첫 제시어를 입력해주세요.')
+
+for(var i=0;i<4;i++){
+
+answer = prompt(word)
+
+if(word[word.length-1]==answer[0]){
+    alert('ok')
+    word = answer
+} else {
+    alert('x')
+}
+}
+
+
+<별 찍기>
+*
+**
+***
+****
+*****
+for(var i=1;i<=5;i++){    
+console.log('*'.repeat(i))
+}
+
+*****
+****
+***
+**
+*
+for(var i=5;i>=0;i--){
+console.log('*'.repeat(i))
+}
+
+*
+**
+****
+********
+****************
+for(var i=1;i<=16;i=i*2){
+    console.log('*'.repeat(i))
+}
+
+*****
+ ****
+  ***
+   **
+    *
+for(var i=5;i>=1;i--){
+console.log(' '.repeat(5-i)+'*'.repeat(i))
+}
+
+*********
+ *******
+  *****
+   ***
+    *
+for(var i=9;i>=1;i=i-2){
+console.log(' '.repeat((9-i)/2)+'*'.repeat(i))
+}

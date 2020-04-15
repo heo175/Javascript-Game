@@ -1,0 +1,25 @@
+참조(얕은 복사)와 복사(깊은 복사)
+
+숫자, 문자, bool, undefined, null -> 복사. 대입해도 참조 관계 안 됨. 
+
+객체(객체, 배열, 함수) -> 대입하면 참조 관계가 됨
+
+복사하는 방법
+1. 빈 객체를 만들고 원시값을 하나씩 대입하기 -> 번거로움
+2. 
+Object.keys() : 객체의 속성명들을 배열로 바꿈
+var obj = { a:1, b:2, c:3}
+var obj2 = {};
+Object.keys(obj).forEach(function(key) {
+  obj2[key] = obj[key];
+});
+겉만 깊은 복사고 속은 얕은 복사
+
+* obj === obj2 -> true면 참조관계
+
+3. obj2 = JSON.parse(JSON.stringify(obj))
+성능이 안 좋아서 최대한 안 쓰는게 좋음
+4. 객체.slice() : 참조 관계를 끊음, 겉만 깊은 복사고 속은 얕은 복사
+
+Object.create() 랑 __proto__ 랑 비슷한 역할
+실무에서는 __proto__ 쓰면 안됨!

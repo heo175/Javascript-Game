@@ -1,0 +1,21 @@
+Math.floor(Math.random() * 9)+1 : 0~9까지 
+Math.ceil(Math.random() * 9)+1 : 0~9까지 ceil은 숫자 올림
+
+
+for(var i=0;i<5;i++){
+var n1 = Math.ceil(Math.random() * 9)+1
+var n2 = Math.ceil(Math.random() * 9)+1
+var result = n1 * n2
+var a = true;
+
+while(a){
+var answer = prompt(String(n1)+'*'+String(n2)+'=')
+
+if(result===Number(answer)){
+    alert('맞았어요.')
+    a = false;
+}else{
+    alert('틀렸어요.')
+}
+}
+}
