@@ -23,3 +23,5 @@ Object.keys(obj).forEach(function(key) {
 
 Object.create() 랑 __proto__ 랑 비슷한 역할
 실무에서는 __proto__ 쓰면 안됨!
+
+테스트 하느라 수정했다 2020 04 15
